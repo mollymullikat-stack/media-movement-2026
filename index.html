@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Media Movement H1 2026 · Far East Fame Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C0D0F; --panel:#151619; --panel2:#1D1E23; --line:#2A2B31;
+  --ink:#F5F5F1; --mut:#A2A39E; --dim:#6E6F6B;
+  --yel:#FFD600; --yel-dim:#B89C08; --yel-ink:#141414;
+  --soc:#FF9273; --tec:#5BD6C6; --mkt:#FFD600;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:'IBM Plex Sans Thai','Leelawadee UI','Segoe UI',sans-serif;
+  background:var(--bg); color:var(--ink); line-height:1.65; font-size:15px;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+::selection{background:var(--yel);color:var(--yel-ink)}
+
+/* ============ App bar ============ */
+.topbar{border-bottom:1px solid var(--line);background:var(--bg)}
+.topbar .wrap{display:flex;align-items:center;gap:18px;padding:16px 20px}
+.logo{position:relative;font-family:Poppins,sans-serif;font-weight:700;
+  font-size:17px;line-height:1.02;letter-spacing:.01em;padding-right:16px;flex:none}
+.logo span{display:block}
+.logo i{position:absolute;top:1px;right:0;width:10px;height:10px;border-radius:50%;background:var(--yel)}
+.tb-title{margin-left:auto;text-align:right}
+.tb-title b{font-family:Poppins,sans-serif;font-weight:700;font-size:16px;letter-spacing:.02em}
+.tb-title b em{color:var(--yel);font-style:normal}
+.tb-title span{display:block;font-size:11.5px;color:var(--mut)}
+
+/* ============ Tabs ============ */
+.tabs{position:sticky;top:0;z-index:60;background:rgba(12,13,15,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:6px;padding:10px 20px;overflow-x:auto}
+.tab{font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;
+  padding:8px 18px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--mut)}
+.tab:hover{color:var(--ink);border-color:#3C3D44}
+.tab.on{background:var(--yel);border-color:var(--yel);color:var(--yel-ink)}
+.view{display:none;padding-bottom:40px}
+.view.on{display:block}
+
+/* ============ shared ============ */
+.eyebrow{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--yel);font-weight:700}
+h2.sec{font-size:23px;font-weight:700;letter-spacing:-.01em;margin:4px 0 4px;text-wrap:balance}
+p.sub{color:var(--mut);max-width:72ch}
+.pad{padding-top:34px}
+
+/* ============ Overview ============ */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:20px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.stat b{display:block;font-family:Poppins,sans-serif;font-variant-numeric:tabular-nums;
+  font-size:27px;font-weight:700;color:var(--yel);letter-spacing:-.02em}
+.stat span{font-size:12.5px;color:var(--mut);display:block;line-height:1.5;margin-top:3px}
+.stat .src{color:var(--dim);font-size:11px}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:26px}
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.chart h3{font-size:14px;font-weight:700;margin-bottom:2px}
+.chart .csrc{font-size:11px;color:var(--dim);margin-bottom:14px}
+.chart .cnote{font-size:12px;color:var(--mut);margin-top:10px}
+/* vertical bars */
+.vbars{display:flex;align-items:flex-end;gap:14px;height:150px;padding-top:6px}
+.vbar{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
+.vbar .bar{width:100%;max-width:64px;background:var(--yel);border-radius:3px 3px 0 0}
+.vbar .val{font-family:Poppins,sans-serif;font-size:12px;font-weight:600;color:var(--ink)}
+.vbar .lbl{font-size:12px;color:var(--mut)}
+/* horizontal bars */
+.hbars{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.hrow{display:grid;grid-template-columns:86px 1fr 58px;align-items:center;gap:10px}
+.hrow .lbl{font-size:12.5px;color:var(--mut);text-align:right}
+.hrow .trk{background:var(--panel2);border-radius:3px;height:14px;overflow:hidden}
+.hrow .fil{height:100%;background:var(--yel);border-radius:3px}
+.hrow .val{font-family:Poppins,sans-serif;font-size:12px;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+/* donut */
+.donutbox{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.legend{display:flex;flex-direction:column;gap:8px}
+.legend div{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--mut)}
+.legend i{width:11px;height:11px;border-radius:3px;flex:none}
+.legend b{color:var(--ink);font-family:Poppins,sans-serif;font-weight:600}
+/* shifts */
+.shift-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;margin-top:18px}
+.shift{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.shift .n{font-family:Poppins,sans-serif;font-size:12px;color:var(--yel);font-weight:700}
+.shift h3{font-size:16px;font-weight:700;margin:4px 0 6px;line-height:1.45}
+.shift p{font-size:13.5px;color:var(--mut)}
+.shift .do{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:13.5px}
+.shift .do b{color:var(--yel);font-weight:600}
+
+/* ============ Months view ============ */
+.msel{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 6px}
+.msel button{font-family:Poppins,'IBM Plex Sans Thai',sans-serif;font-weight:600;font-size:13.5px;
+  cursor:pointer;padding:8px 16px;border-radius:6px;border:1px solid var(--line);
+  background:var(--panel);color:var(--mut)}
+.msel button.on{background:var(--yel);border-color:var(--yel);color:var(--yel-ink)}
+.mtheme{color:var(--mut);font-size:14.5px;margin:6px 0 14px}
+.mtheme b{color:var(--ink)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.filters button{font-family:inherit;font-size:12.5px;font-weight:600;cursor:pointer;
+  padding:5px 13px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--mut)}
+.filters button.on{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  padding:18px 20px 14px;display:flex;flex-direction:column;gap:9px}
+.card.hide{display:none}
+.card header{display:flex;gap:6px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;
+  letter-spacing:.06em;padding:3px 10px;border-radius:99px;background:var(--panel2)}
+.chip svg{width:12px;height:12px}
+.chip.soc{color:var(--soc)} .chip.tec{color:var(--tec)} .chip.mkt{color:var(--mkt)}
+.chip.th{color:var(--ink);border:1px solid var(--line);background:transparent}
+.card h3{font-size:16px;font-weight:700;line-height:1.45;text-wrap:balance}
+.card .desc{font-size:13.5px;color:var(--mut)}
+.kstat{display:flex;align-items:baseline;gap:10px;background:#25200A;border-radius:4px;padding:8px 12px}
+.kstat b{font-family:Poppins,sans-serif;font-variant-numeric:tabular-nums;
+  font-size:20px;font-weight:700;color:var(--yel);white-space:nowrap}
+.kstat span{font-size:12.5px;color:#CBBE7A;line-height:1.45}
+.apply{font-size:13.5px;background:var(--panel2);border-radius:4px;padding:9px 12px;color:#D8D8D3}
+.apply b{color:var(--yel);font-weight:700}
+.card footer{margin-top:auto;padding-top:8px;border-top:1px solid #222329;font-size:11.5px;color:var(--dim)}
+.card footer b{color:#8B8C86;font-weight:600}
+
+/* ============ Category watch ============ */
+.cattool{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:18px 0 4px;
+  background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 18px}
+.cattool label{font-size:13px;font-weight:700;color:var(--yel);letter-spacing:.04em}
+.cattool select{font-family:inherit;font-size:14px;font-weight:600;color:var(--ink);
+  background:var(--panel2);border:1px solid #3A3B42;border-radius:6px;padding:9px 14px;min-width:280px;cursor:pointer}
+.cattool select:focus{outline:2px solid var(--yel)}
+.cattool .upd{font-size:12px;color:var(--mut);margin-left:auto}
+.cattool .upd b{color:var(--ink)}
+.ctx{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:14px 0 8px}
+.cmonth{margin-top:22px}
+.cmonth h3{font-family:Poppins,'IBM Plex Sans Thai',sans-serif;font-size:15px;font-weight:700;
+  color:var(--yel);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:12px}
+.empty{border:1px dashed #4A4327;background:#191708;border-radius:6px;padding:26px;text-align:center;
+  color:#CBBE7A;font-size:14px;margin-top:18px}
+/* clips (TikTok / PR pieces) */
+.clips{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.clip{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px 12px;
+  text-decoration:none;display:flex;flex-direction:column;gap:7px}
+.clip .cv{display:flex;align-items:baseline;gap:10px}
+.clip .cv b{font-family:Poppins,sans-serif;font-size:22px;font-weight:700;color:var(--yel);font-variant-numeric:tabular-nums}
+.clip .cv span{font-size:11.5px;color:var(--dim)}
+.clip h4{font-size:13.5px;font-weight:700;line-height:1.45;color:var(--ink)}
+.clip .cnote2{font-size:12px;color:var(--mut)}
+.clip .cgo{margin-top:auto;padding-top:8px;border-top:1px solid #222329;font-size:11.5px;color:var(--yel);font-weight:600}
+/* ---------- hover pop (เด้งตามเมาส์) ---------- */
+.card,.stat,.shift,.film,.chart,.clip{
+  transition:transform .22s cubic-bezier(.34,1.6,.64,1), border-color .18s ease, box-shadow .22s ease;
+  will-change:transform}
+.card:hover,.stat:hover,.shift:hover,.chart:hover{
+  transform:translateY(-5px);border-color:#54555C;box-shadow:0 12px 28px rgba(0,0,0,.5)}
+.film:hover,.clip:hover{
+  transform:translateY(-6px) scale(1.015);border-color:var(--yel-dim);box-shadow:0 14px 30px rgba(0,0,0,.55)}
+.kstat,.apply{transition:background .18s ease}
+.card:hover .kstat{background:#2E2809}
+.film .thumb img{transition:transform .3s ease}
+.film:hover .thumb img{transform:scale(1.05)}
+@media (prefers-reduced-motion:reduce){
+  .card,.stat,.shift,.film,.chart,.clip,.film .thumb img{transition:none!important;transform:none!important}
+  .card:hover,.stat:hover,.shift:hover,.chart:hover,.film:hover,.clip:hover{transform:none!important}
+}
+.addcat{font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;padding:9px 16px;
+  border-radius:6px;border:1px dashed var(--yel-dim);background:transparent;color:var(--yel)}
+.addcat:hover{background:var(--yel);color:var(--yel-ink);border-style:solid}
+.catform{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 18px;margin-top:10px}
+.cf-row{display:flex;gap:10px;flex-wrap:wrap}
+.cf-row input{font-family:inherit;font-size:14px;color:var(--ink);background:var(--panel2);
+  border:1px solid #3A3B42;border-radius:6px;padding:9px 14px;flex:1;min-width:220px}
+.cf-row input::placeholder{color:var(--dim)}
+.cf-row input:focus{outline:2px solid var(--yel)}
+.cf-row button{font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;padding:9px 22px;
+  border-radius:6px;border:0;background:var(--yel);color:var(--yel-ink)}
+.cf-note{font-size:12px;color:var(--mut);margin-top:8px}
+
+/* ============ Films ============ */
+.films{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:18px}
+.film{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  text-decoration:none;display:flex;flex-direction:column}
+.film:hover{border-color:#4A4B52}
+.thumb{position:relative;aspect-ratio:16/9;background:var(--panel2);display:flex;align-items:center;justify-content:center}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .ph{font-family:Poppins,sans-serif;font-size:34px;font-weight:700;color:#3C3D44}
+.thumb .play{position:absolute;inset:0;margin:auto;width:46px;height:46px;border-radius:50%;
+  background:rgba(12,13,15,.72);display:flex;align-items:center;justify-content:center}
+.thumb .play::after{content:"";border-style:solid;border-width:8px 0 8px 13px;
+  border-color:transparent transparent transparent var(--yel);margin-left:3px}
+.fbody{padding:14px 16px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.fbody .meta{display:flex;gap:6px;align-items:center;font-size:11px}
+.ftag{color:var(--yel);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.fmon{color:var(--dim)}
+.fbody h3{font-size:14.5px;font-weight:700;line-height:1.4}
+.fbody .brand{font-size:12px;color:var(--mut);font-weight:600}
+.fbody .why{font-size:12.5px;color:var(--mut)}
+.fbody .fsrc{margin-top:auto;padding-top:8px;font-size:11px;color:var(--dim)}
+
+/* ============ Video modal ============ */
+.vmodal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  background:rgba(5,5,6,.88);padding:20px}
+.vmodal.on{display:flex}
+.vbox{width:min(920px,100%);}
+.vhead{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.vhead h3{font-size:15px;font-weight:700;flex:1}
+.vhead a{font-size:12px;color:var(--mut)}
+.vclose{cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink);
+  border-radius:99px;width:34px;height:34px;font-size:16px;line-height:1;flex:none}
+.vclose:hover{background:var(--yel);color:var(--yel-ink);border-color:var(--yel)}
+.vframe{position:relative;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;
+  border:1px solid var(--line)}
+.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ============ Footer ============ */
+footer.site{border-top:1px solid var(--line);margin-top:30px;padding:32px 0 44px;background:#08090A}
+footer.site h2{font-size:16px;margin-bottom:8px}
+footer.site h2 i{color:var(--yel);font-style:normal}
+footer.site p{font-size:12.5px;color:var(--mut);max-width:90ch}
+.srcs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 16px}
+.srcs span{font-size:11.5px;border:1px solid var(--line);border-radius:99px;padding:3px 11px;color:var(--mut)}
+.flogo{display:flex;align-items:center;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.flogo .logo{font-size:13px}
+.flogo span.tag{font-size:11px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:640px){
+  .cards,.films,.shift-grid{grid-template-columns:1fr}
+  .tb-title span{display:none}
+  .cattool select{min-width:0;flex:1}
+}
+:focus-visible{outline:2px solid var(--yel);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<!-- ============ App bar ============ -->
+<header class="topbar">
+  <div class="wrap">
+    <div class="logo" aria-label="Far East Fame Line">
+      <span>Far East</span><span>Fame Line</span><i></i>
+    </div>
+    <div class="tb-title">
+      <b>MEDIA MOVEMENT <em>H1·2026</em></b>
+      <span>อัปเดตความเคลื่อนไหวสื่อ กระแส และการตลาด · มกราคม–มิถุนายน 2026</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ Tabs ============ -->
+<nav class="tabs" aria-label="เมนูหลัก">
+  <div class="wrap">
+    <button class="tab on" data-v="overview">ภาพรวม</button>
+    <button class="tab" data-v="months">ไทม์ไลน์รายเดือน</button>
+    <button class="tab" data-v="cat">จับตาคู่แข่ง</button>
+    <button class="tab" data-v="film">คลังหนังโฆษณา</button>
+  </div>
+</nav>
+
+<main>
+  <!-- ============ Overview ============ -->
+  <section class="view on" id="v-overview">
+    <div class="wrap pad">
+      <div class="eyebrow">Executive Summary</div>
+      <h2 class="sec">ครึ่งปีแรก 2026 ในหน้าเดียว</h2>
+      <p class="sub">ตัวเลขสำคัญ กราฟอุตสาหกรรม และ 6 แรงขับเคลื่อนที่กำหนดทิศทางการตลาด — เจาะรายละเอียดได้ที่แท็บ "ไทม์ไลน์รายเดือน"</p>
+      <div class="stats" id="stats"></div>
+      <div class="charts" id="charts"></div>
+      <div class="pad">
+        <div class="eyebrow">Big Shifts</div>
+        <h2 class="sec">6 แรงขับเคลื่อนใหญ่ของครึ่งปีแรก</h2>
+      </div>
+      <div class="shift-grid" id="shifts"></div>
+    </div>
+  </section>
+
+  <!-- ============ Months ============ -->
+  <section class="view" id="v-months">
+    <div class="wrap pad">
+      <div class="eyebrow">Monthly Timeline</div>
+      <h2 class="sec">ความเคลื่อนไหวรายเดือน</h2>
+      <div class="msel" id="msel"></div>
+      <p class="mtheme" id="mtheme"></p>
+      <div class="filters" id="filters">
+        <button data-f="all" class="on">ทั้งหมด</button>
+        <button data-f="soc">กระแสสังคม</button>
+        <button data-f="tec">เทคโนโลยี & สื่อ</button>
+        <button data-f="mkt">การตลาด</button>
+        <button data-f="th">เฉพาะไทย</button>
+      </div>
+      <div class="cards" id="mcards"></div>
+    </div>
+  </section>
+
+  <!-- ============ Category watch ============ -->
+  <section class="view" id="v-cat">
+    <div class="wrap pad">
+      <div class="eyebrow">Category Watch</div>
+      <h2 class="sec">จับตาคู่แข่งรายหมวดสินค้า</h2>
+      <p class="sub">ความเคลื่อนไหวของแบรนด์ในหมวดสินค้าของคุณ อัปเดตเป็นรายเดือน — ต้องการเพิ่มหมวดใหม่ แจ้งทีม FEFL ได้เลย</p>
+      <div class="cattool">
+        <label for="catSel">PRODUCT CATEGORY</label>
+        <select id="catSel"></select>
+        <button class="addcat" id="addCatBtn" type="button">＋ เพิ่มหมวดใหม่</button>
+        <span class="upd">อัปเดตล่าสุด: <b id="catUpd">—</b></span>
+      </div>
+      <div class="catform" id="catForm" hidden>
+        <div class="cf-row">
+          <input id="cfName" type="text" placeholder="ชื่อหมวดสินค้า เช่น Skincare, เครื่องดื่มชูกำลัง" maxlength="60">
+          <input id="cfBrands" type="text" placeholder="แบรนด์คู่แข่งที่อยากให้จับตา (ถ้ามี) เช่น A, B, C" maxlength="120">
+          <button id="cfSubmit" type="button">ส่งคำขอ</button>
+        </div>
+        <p class="cf-note">หมวดใหม่จะขึ้นในรายการทันที และทีม FEFL จะรวบรวมข้อมูลคู่แข่งให้ในรอบอัปเดตถัดไป</p>
+      </div>
+      <div id="catBody"></div>
+    </div>
+  </section>
+
+  <!-- ============ Films ============ -->
+  <section class="view" id="v-film">
+    <div class="wrap pad">
+      <div class="eyebrow">Film & TVC Watch</div>
+      <h2 class="sec">คลังหนังโฆษณา & คลิปที่ต้องดู</h2>
+      <p class="sub">TVC / Online Film / Case Study ของคู่แข่งและแคมเปญที่น่าสนใจ ครึ่งปีแรก 2026 — กดที่การ์ดเพื่อเปิดดูบน YouTube</p>
+      <div class="films" id="films"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site">
+  <div class="wrap">
+    <h2>Source of Data <i>·</i> แหล่งข้อมูลและวิธีการ</h2>
+    <p>รวบรวม คัดกรอง และวิเคราะห์โดยทีม <b>Media Intelligence</b> ของ Far East Fame Line จากรายงาน Media Movement รายเดือน ประกอบกับแหล่งข้อมูลมาตรฐานที่อุตสาหกรรมโฆษณาและการตลาดยอมรับ — ทุกการ์ดระบุที่มากำกับ ตัวเลขคาดการณ์เป็นของสำนักที่อ้างอิง ณ เวลาที่เผยแพร่</p>
+    <div class="srcs">
+      <span>Nielsen / MI Learn Lab</span><span>DAAT</span><span>Wisesight</span><span>Dataxet</span>
+      <span>สำนักงานสถิติแห่งชาติ</span><span>SCB EIC</span><span>Socialinsider</span><span>Gartner</span>
+      <span>eMarketer</span><span>Skai</span><span>HarrisX</span><span>iSpot</span><span>Meltwater</span>
+      <span>Campaign · Adweek · Ad Age · The Drum · Digiday</span>
+      <span>Cannes Lions</span><span>Google · Meta · TikTok · Amazon Ads · OpenAI</span>
+      <span>Marketing Oops · Brand Buffet · Zanroo</span>
+    </div>
+    <p>ข้อมูลอุตสาหกรรมไทย: งบโฆษณารวม 4 เดือนแรกปี 2026 อยู่ที่ 26,056 ล้านบาท (−4.6% YoY) — อินเทอร์เน็ต 41% · ทีวี 36% · สื่อนอกบ้าน 17% (Nielsen ปรับปรุงโดย MI Learn Lab; อินเทอร์เน็ตจาก DAAT)</p>
+    <div class="flogo">
+      <div class="logo"><span>Far East</span><span>Fame Line</span><i></i></div>
+      <span class="tag">Media Movement Dashboard · จัดทำกรกฎาคม 2026 · สำหรับลูกค้าเท่านั้น</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ Video modal ============ -->
+<div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="เล่นวิดีโอ">
+  <div class="vbox">
+    <div class="vhead">
+      <h3 id="vtitle"></h3>
+      <a id="vlink" href="#" target="_blank" rel="noopener">เปิดบน YouTube ↗</a>
+      <button class="vclose" id="vclose" aria-label="ปิด">✕</button>
+    </div>
+    <div class="vframe" id="vframe"></div>
+  </div>
+</div>
+
+<script src="cfg.js"></script>
+<script src="data.js"></script>
+<script>
+var D = window.MM_DATA;
+var esc = function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+
+/* ---------- icons ---------- */
+var ICONS = {
+  soc: '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5c-3.6 0-6.5 2.5-6.5 5.6 0 1.8 1 3.4 2.5 4.4l-.6 3 3.2-1.6c.5.1.9.1 1.4.1 3.6 0 6.5-2.5 6.5-5.9S11.6 1.5 8 1.5z"/></svg>',
+  tec: '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 1h1.5v2h3V1H11v2h1a1 1 0 0 1 1 1v1h2v1.5h-2v3h2V11h-2v1a1 1 0 0 1-1 1h-1v2H9.5v-2h-3v2H5v-2H4a1 1 0 0 1-1-1v-1H1V9.5h2v-3H1V5h2V4a1 1 0 0 1 1-1h1V1zm0 4v6h6V5H5z"/></svg>',
+  mkt: '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M13 2v9l-4-1.8V13a1.5 1.5 0 0 1-3 0V8.6L3.5 7.5A2.8 2.8 0 0 1 3.5 3L13 2z"/></svg>'
+};
+var CATNAME = {soc:'กระแสสังคม', tec:'เทคโนโลยี & สื่อ', mkt:'การตลาด'};
+
+/* ---------- tabs ---------- */
+var tabs = document.querySelectorAll('.tab');
+tabs.forEach(function(t){
+  t.addEventListener('click', function(){
+    tabs.forEach(function(x){x.classList.remove('on')});
+    t.classList.add('on');
+    document.querySelectorAll('.view').forEach(function(v){v.classList.remove('on')});
+    document.getElementById('v-'+t.dataset.v).classList.add('on');
+    window.scrollTo(0,0);
+    ping('view_'+t.dataset.v);
+  });
+});
+
+/* ---------- overview: stats ---------- */
+document.getElementById('stats').innerHTML = D.stats.map(function(s){
+  return '<div class="stat"><b>'+esc(s.v)+'</b><span>'+esc(s.l)+'</span><span class="src">ที่มา: '+esc(s.s)+'</span></div>';
+}).join('');
+
+/* ---------- overview: charts ---------- */
+(function(){
+  var c = D.charts, h = '';
+  /* vertical bars — ad spend */
+  var mx = Math.max.apply(null, c.adspend.bars.map(function(b){return b.v}));
+  h += '<div class="chart"><h3>'+esc(c.adspend.title)+'</h3><div class="csrc">ที่มา: '+esc(c.adspend.src)+'</div><div class="vbars">' +
+    c.adspend.bars.map(function(b){
+      return '<div class="vbar"><span class="val">'+b.v.toLocaleString()+'</span><div class="bar" style="height:'+Math.round(b.v/mx*100)+'%"></div><span class="lbl">'+esc(b.l)+'</span></div>';
+    }).join('') + '</div><div class="cnote">'+esc(c.adspend.note)+'</div></div>';
+  /* donut — media mix */
+  var cols = ['#FFD600','#5BD6C6','#FF9273','#55565C'];
+  var R=42, CIRC=2*Math.PI*R, off=0, segs='';
+  c.mix.slices.forEach(function(s,i){
+    var len = s.v/100*CIRC;
+    segs += '<circle r="'+R+'" cx="60" cy="60" fill="none" stroke="'+cols[i%4]+'" stroke-width="18" stroke-dasharray="'+len+' '+(CIRC-len)+'" stroke-dashoffset="'+(-off)+'" transform="rotate(-90 60 60)"/>';
+    off += len;
+  });
+  h += '<div class="chart"><h3>'+esc(c.mix.title)+'</h3><div class="csrc">ที่มา: '+esc(c.mix.src)+'</div><div class="donutbox"><svg width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">'+segs+'</svg><div class="legend">' +
+    c.mix.slices.map(function(s,i){return '<div><i style="background:'+cols[i%4]+'"></i>'+esc(s.l)+' <b>'+s.v+'%</b></div>'}).join('') +
+    '</div></div></div>';
+  /* hbars helper */
+  var hb = function(o, unit){
+    var m = Math.max.apply(null, o.bars.map(function(b){return b.v}));
+    return '<div class="chart"><h3>'+esc(o.title)+'</h3><div class="csrc">ที่มา: '+esc(o.src)+'</div><div class="hbars">' +
+      o.bars.map(function(b){
+        return '<div class="hrow"><span class="lbl">'+esc(b.l)+'</span><div class="trk"><div class="fil" style="width:'+Math.max(3,Math.round(b.v/m*100))+'%"></div></div><span class="val">'+b.v.toLocaleString()+(unit||'')+'</span></div>';
+      }).join('') + '</div></div>';
+  };
+  h += hb(c.er, '%');
+  h += hb(c.digicat, '');
+  document.getElementById('charts').innerHTML = h;
+})();
+
+/* ---------- overview: shifts ---------- */
+document.getElementById('shifts').innerHTML = D.shifts.map(function(s,i){
+  return '<article class="shift"><div class="n">0'+(i+1)+'</div><h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p><div class="do"><b>ทำอย่างไร:</b> '+esc(s.a)+'</div></article>';
+}).join('');
+
+/* ---------- months ---------- */
+var curMonth = D.months.length-1, curFilter = 'all';
+var msel = document.getElementById('msel');
+msel.innerHTML = D.months.map(function(m,i){
+  return '<button data-i="'+i+'">'+esc(m.short)+'</button>';
+}).join('');
+function cardHTML(c){
+  var h = '<article class="card'+((curFilter!=='all') && !(curFilter==='th'?c.th:c.cat===curFilter) ? ' hide':'')+'">';
+  h += '<header><span class="chip '+c.cat+'">'+ICONS[c.cat]+esc(CATNAME[c.cat])+'</span>';
+  if(c.th) h += '<span class="chip th">ไทย</span>';
+  h += '</header><h3>'+esc(c.title)+'</h3><p class="desc">'+esc(c.desc)+'</p>';
+  if(c.stat) h += '<div class="kstat"><b>'+esc(c.stat.v)+'</b><span>'+esc(c.stat.l)+'</span></div>';
+  h += '<p class="apply"><b>ปรับใช้:</b> '+esc(c.apply)+'</p>';
+  h += '<footer><b>ที่มา:</b> '+esc(c.src)+'</footer></article>';
+  return h;
+}
+function renderMonth(){
+  var m = D.months[curMonth];
+  msel.querySelectorAll('button').forEach(function(b,i){b.classList.toggle('on', i===curMonth)});
+  document.getElementById('mtheme').innerHTML = '<b>'+esc(m.name)+'</b> — '+esc(m.theme);
+  document.getElementById('mcards').innerHTML = m.cards.map(cardHTML).join('');
+}
+msel.addEventListener('click', function(e){
+  var b = e.target.closest('button'); if(!b) return;
+  curMonth = +b.dataset.i; renderMonth(); ping('month_'+D.months[curMonth].short);
+});
+var fbtns = document.querySelectorAll('#filters button');
+fbtns.forEach(function(b){
+  b.addEventListener('click', function(){
+    fbtns.forEach(function(x){x.classList.remove('on')}); b.classList.add('on');
+    curFilter = b.dataset.f; renderMonth();
+  });
+});
+renderMonth();
+
+/* ---------- category watch ---------- */
+var catSel = document.getElementById('catSel');
+/* หมวดที่ผู้ใช้ขอเพิ่มเอง เก็บในเครื่อง (localStorage) จนกว่าทีมจะเติมข้อมูลจริงใน data.js */
+var userCats = [];
+try{ userCats = JSON.parse(localStorage.getItem('mm_cats')||'[]'); }catch(e){}
+userCats.forEach(function(c){
+  if(!D.categories[c.key]) D.categories[c.key] = {name:c.name, updated:'รอข้อมูล — ทีมกำลังรวบรวม', context:[], months:[]};
+});
+function fillCatSel(sel){
+  catSel.innerHTML = Object.keys(D.categories).map(function(k){
+    return '<option value="'+esc(k)+'">'+esc(D.categories[k].name)+'</option>';
+  }).join('');
+  if(sel) catSel.value = sel;
+}
+fillCatSel();
+/* ฟอร์มเพิ่มหมวดใหม่ */
+var catForm = document.getElementById('catForm');
+document.getElementById('addCatBtn').addEventListener('click', function(){
+  catForm.hidden = !catForm.hidden;
+  if(!catForm.hidden) document.getElementById('cfName').focus();
+});
+document.getElementById('cfSubmit').addEventListener('click', function(){
+  var name = document.getElementById('cfName').value.trim();
+  var brands = document.getElementById('cfBrands').value.trim();
+  if(!name) { document.getElementById('cfName').focus(); return; }
+  var key = 'req-' + name.toLowerCase().replace(/[^a-z0-9ก-๙]+/g,'-').slice(0,40);
+  if(!D.categories[key]){
+    D.categories[key] = {name:name, updated:'รอข้อมูล — ทีมกำลังรวบรวม', context:[], months:[]};
+    userCats.push({key:key, name:name});
+    try{ localStorage.setItem('mm_cats', JSON.stringify(userCats)); }catch(e){}
+  }
+  fillCatSel(key); renderCat();
+  ping('catreq_' + name + (brands ? '|' + brands : ''));
+  document.getElementById('cfName').value=''; document.getElementById('cfBrands').value='';
+  catForm.hidden = true;
+});
+function renderCat(){
+  var c = D.categories[catSel.value];
+  document.getElementById('catUpd').textContent = c.updated || '—';
+  var h = '';
+  if(c.context && c.context.length){
+    h += '<div class="ctx">'+c.context.map(function(s){
+      return '<div class="stat"><b>'+esc(s.v)+'</b><span>'+esc(s.l)+'</span><span class="src">ที่มา: '+esc(s.s)+'</span></div>';
+    }).join('')+'</div>';
+  }
+  if(c.clips && c.clips.length){
+    h += '<div class="cmonth"><h3>คลิปเด่น & ชิ้นงานประชาสัมพันธ์ในหมวด — กดเพื่อเปิดดูต้นฉบับ</h3><div class="clips">' +
+      c.clips.map(function(cl){
+        return '<a class="clip" href="'+esc(cl.url)+'" target="_blank" rel="noopener">' +
+          '<span class="chip mkt">'+ICONS.mkt+esc(cl.brand)+'</span>' +
+          '<div class="cv"><b>'+esc(cl.views)+'</b><span>views · '+esc(cl.likes)+' likes</span></div>' +
+          '<h4>'+esc(cl.title)+'</h4><div class="cnote2">'+esc(cl.note)+'</div>' +
+          '<div class="cgo">ดูคลิปต้นฉบับ ↗</div></a>';
+      }).join('') + '</div></div>';
+  }
+  if(c.months && c.months.length){
+    c.months.forEach(function(mo){
+      h += '<div class="cmonth"><h3>'+esc(mo.m)+'</h3><div class="cards">' +
+        mo.items.map(function(it){
+          return '<article class="card"><header><span class="chip mkt">'+ICONS.mkt+esc(it.brand)+'</span></header>' +
+            '<h3>'+esc(it.title)+'</h3><p class="desc">'+esc(it.desc)+'</p>' +
+            (it.apply ? '<p class="apply"><b>ปรับใช้:</b> '+esc(it.apply)+'</p>' : '') +
+            '<footer><b>ที่มา:</b> '+esc(it.src)+'</footer></article>';
+        }).join('') + '</div></div>';
+    });
+  } else {
+    h += '<div class="empty">ข้อมูลหมวดนี้กำลังรวบรวม — จะอัปเดตในรอบรายเดือนถัดไป</div>';
+  }
+  document.getElementById('catBody').innerHTML = h;
+}
+catSel.addEventListener('change', function(){ renderCat(); ping('cat_'+catSel.value); });
+renderCat();
+
+/* ---------- films ---------- */
+document.getElementById('films').innerHTML = D.films.map(function(f,i){
+  var thumb = f.yt
+    ? '<img src="https://i.ytimg.com/vi/'+esc(f.yt)+'/hqdefault.jpg" alt="" loading="lazy">'
+    : '<span class="ph">'+esc((f.brand||'?').charAt(0))+'</span>';
+  return '<a class="film" data-i="'+i+'" href="'+esc(f.url)+'" target="_blank" rel="noopener">' +
+    '<div class="thumb">'+thumb+'<span class="play"></span></div>' +
+    '<div class="fbody"><div class="meta"><span class="ftag">'+esc(f.tag)+'</span><span class="fmon">'+esc(f.month)+' 2026'+(f.th?' · ไทย':'')+'</span></div>' +
+    '<h3>'+esc(f.title)+'</h3><div class="brand">'+esc(f.brand)+'</div>' +
+    '<div class="why">'+esc(f.why)+'</div><div class="fsrc">ที่มา: '+esc(f.src)+'</div></div></a>';
+}).join('');
+
+/* ---------- video modal (click-to-play) ---------- */
+var vm = document.getElementById('vmodal'), vf = document.getElementById('vframe');
+function closeVideo(){ vm.classList.remove('on'); vf.innerHTML=''; }
+document.getElementById('vclose').addEventListener('click', closeVideo);
+vm.addEventListener('click', function(e){ if(e.target===vm) closeVideo(); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeVideo(); });
+document.getElementById('films').addEventListener('click', function(e){
+  var a = e.target.closest('.film'); if(!a) return;
+  var f = D.films[+a.dataset.i];
+  if(!f || !f.yt) return; /* ไม่มีวิดีโอ → เปิดลิงก์ตามปกติ */
+  e.preventDefault();
+  document.getElementById('vtitle').textContent = f.brand + ' — ' + f.title;
+  document.getElementById('vlink').href = f.url;
+  vf.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/'+esc(f.yt)+'?autoplay=1&rel=0" ' +
+    'title="'+esc(f.title)+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+  vm.classList.add('on');
+  ping('play_'+f.yt);
+});
+
+/* ---------- engagement ping ---------- */
+var _k = new URLSearchParams(location.search).get('k') || 'direct';
+function ping(ev){
+  var E = window.__mmcfg && window.__mmcfg.e; if(!E) return;
+  try{ new Image().src = E+'?k='+encodeURIComponent(_k)+'&ev='+encodeURIComponent(ev)+'&sw='+(screen.width||0)+'&t='+Date.now(); }catch(e){}
+}
+ping('open');
+[30,120].forEach(function(s){ setTimeout(function(){ if(!document.hidden) ping('read'+s); }, s*1000); });
+</script>
+</body>
+</html>
